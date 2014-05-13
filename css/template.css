@@ -1,0 +1,879 @@
+@import url('erros.css');
+@import url('eleganticons.css');
+@import url('opensource.css');
+
+/* ============
+   RESET
+   ============ */
+html {
+	height: 100%;
+	overflow: auto;
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+
+ul {
+	list-style: none;
+}
+
+blockquote,q{
+	quotes:none;
+}
+
+hr {
+	display: none;
+}
+
+textarea {
+	overflow: auto;
+}
+
+select {
+	-webkit-appearance: none;
+}
+
+button {
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	background: none;
+}
+
+iframe {
+	border: none;
+	overflow: hidden;
+}
+
+* {
+	outline: 0 none;
+}
+
+a,a:hover {
+	text-decoration: none;
+}
+
+
+/* ============
+   CLEARFIX
+   ============ */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+
+/* ============
+   CLASSES PADROES
+   ============ */
+.ir {
+	text-indent: -100%;
+	overflow: hidden;
+	white-space: nowrap;
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+}
+
+.table {
+	display: table;
+}
+
+.tableCell {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+
+/* ============
+   FONTES
+   ============ */
+@font-face {
+	font-family: 'LexiaBold';
+	src: url('../fontes/lexia_std_bd-webfont.eot');
+	src: url('../fontes/lexia_std_bd-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/lexia_std_bd-webfont.woff') format('woff'),
+		 url('../fontes/lexia_std_bd-webfont.ttf') format('truetype'),
+		 url('../fontes/lexia_std_bd-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaBoldItalic';
+	src: url('../fontes/lexia_std_bdit-webfont.eot');
+	src: url('../fontes/lexia_std_bdit-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/lexia_std_bdit-webfont.woff') format('woff'),
+		 url('../fontes/lexia_std_bdit-webfont.ttf') format('truetype'),
+		 url('../fontes/lexia_std_bdit-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'LexiaXbold';
+	src: url('../fontes/lexia_std_xbd-webfont.eot');
+	src: url('../fontes/lexia_std_xbd-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/lexia_std_xbd-webfont.woff') format('woff'),
+		 url('../fontes/lexia_std_xbd-webfont.ttf') format('truetype'),
+		 url('../fontes/lexia_std_xbd-webfont.svg#lexiaxbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaItalic';
+	src: url('../fontes/lexia_std_it-webfont.eot');
+	src: url('../fontes/lexia_std_it-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/lexia_std_it-webfont.woff') format('woff'),
+		 url('../fontes/lexia_std_it-webfont.ttf') format('truetype'),
+		 url('../fontes/lexia_std_it-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaRegular';
+	src: url('../fontes/lexia_std_rg-webfont.eot');
+	src: url('../fontes/lexia_std_rg-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/lexia_std_rg-webfont.woff') format('woff'),
+		 url('../fontes/lexia_std_rg-webfont.ttf') format('truetype'),
+		 url('../fontes/lexia_std_rg-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaThin';
+	src: url('../fontes/lexia_std_th-webfont.eot');
+	src: url('../fontes/lexia_std_th-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/lexia_std_th-webfont.woff') format('woff'),
+		 url('../fontes/lexia_std_th-webfont.ttf') format('truetype'),
+		 url('../fontes/lexia_std_th-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaAD';
+	src: url('../fontes/lexia_typo_ad-webfont.eot');
+	src: url('../fontes/lexia_typo_ad-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/lexia_typo_ad-webfont.woff') format('woff'),
+		 url('../fontes/lexia_typo_ad-webfont.ttf') format('truetype'),
+		 url('../fontes/lexia_typo_ad-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LexiaADItalic';
+	src: url('../fontes/lexia_typo_adit-webfont.eot');
+	src: url('../fontes/lexia_typo_adit-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/lexia_typo_adit-webfont.woff') format('woff'),
+		 url('../fontes/lexia_typo_adit-webfont.ttf') format('truetype'),
+		 url('../fontes/lexia_typo_adit-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+	background: #FFF;
+	color: #FFF;
+	font-family: 'OpenSans', sans-serif;
+	font-size: 12px;
+	line-height: 1em;
+	text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+}
+
+/* ============
+   CMS - FORMATACAO DE TAGS DO EDITOR
+   ============ */
+.cms p{}
+.cms a{text-decoration:underline;}
+.cms em,.cms i{}
+.cms b,.cms strong{}
+.cms u{}
+.cms ul,.cms ol{}
+.cms ul li{list-style:square inside;}
+.cms ol li{list-style:decimal inside;}
+.cms li{}
+.cms strike{}
+
+
+
+/* ============
+   GERAIS
+   ============ */
+.container.
+.containerGeral {
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1280px;
+}
+
+.containerGeral {
+	margin: 0 50px;
+	display: block;
+}
+
+.geralTransition {
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.parallax {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+}
+
+.bgCover {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.sessao {
+	width: 100%;
+	position: relative;
+}
+
+.sessaoTitulo {
+	border-bottom: 4px solid #cdd400;
+	color: #363636;
+	display: inline-block;
+	font-family: 'LexiaRegular', sans-serif;
+	font-size: 40px;
+	line-height: 1em;
+	padding: 0 95px 15px;
+	text-transform: uppercase;
+}
+
+.bgHover {
+	background: #cdd400;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	right: 50%;
+	bottom: 50%;
+	z-index: 2;
+	opacity: 0.8;
+	-moz-opacity: 0.8;
+	filter: alpha(opacity=80);
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.videosLink:hover .bgHover,
+.trabalhosLi:hover .bgHover {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+
+
+/* ============
+   ESTRUTURA
+   ============ */
+#wrapper {
+}
+
+#header {
+	background-image: url("../img/backgrounds/bg.jpg");
+	height: 800px;
+	position: relative;
+}
+
+#content {
+}
+
+#main {
+}
+
+#footer {
+	background: #cdd400;
+	padding: 80px 0 65px;
+}
+
+
+
+/* ============
+   TOPO
+   ============ */
+#blocoLogoMenu {
+	display: block;
+	padding-top: 50px;
+	position: relative;
+	z-index: 101;
+}
+
+#logo {
+	float: left;
+}
+
+#logo .logoLink {
+	display: block;
+	width: 130px;
+}
+
+#logo .logoImg {
+	display: block;
+	width: 100%;
+}
+
+#navMenu {
+	float: right;
+}
+
+#menuUl {
+	font-size: 0;
+}
+
+.menuLi {
+	border-left: 1px dotted #FFF;
+	display: inline-block;
+	padding: 0 18px;
+	height: 34px;
+}
+
+.menuLi:last-child {
+	border-right: 1px dotted #FFF;
+}
+
+.menuLink,
+.menuIcone {
+	border-bottom: 2px solid transparent;
+	color: #FFF;
+	display: block;
+	font-size: 16px;
+}
+
+.menuLink {
+	font-family: 'LexiaBold', sans-serif;
+	line-height: 1em;
+	text-transform: uppercase;
+	padding: 10px 0 6px;
+}
+
+.menuIcone {
+	padding: 8px 5px 6px;
+	position: relative;
+	top: 3px;
+}
+
+.menuLink:hover,
+.menuIcone:hover {
+	border-color: #cdd400;
+	color: #363636;
+}
+
+#tituloOusadia,
+#tituloOusadiaMobile {
+	width: 400px;
+	font-family: 'LexiaItalic', sans-serif;
+	font-size: 60px;
+	line-height: 1em;
+	position: absolute;
+	left: 50%;
+	bottom: 60px;
+	margin-left: -220px;
+	text-align: center;
+	z-index: 99;
+}
+
+#tituloOusadia span,
+#tituloOusadiaMobile span {
+	display: block;
+}
+
+#tituloOusadiaMobile {
+	display: none;
+	font-size: 50px;
+	width: 240px;
+	margin-left: -120px;
+}
+
+
+/* ============
+   MENU FIXO
+   ============ */
+#blocoLogoMenu.menuFixo {
+	background: #FFF;
+	border-bottom: 1px solid #EEE;
+	height: 50px;
+	position: absolute;
+	top: -71px;
+	left: 0;
+	right: 0;
+	padding-top: 20px;
+	z-index: -1;
+}
+
+#blocoLogoMenu.menuFixoShow {
+	top: 0px;
+	position: fixed;
+	z-index: 999;
+}
+
+#blocoLogoMenu.menuFixo .maskMenu,
+#blocoLogoMenu.menuFixoShow .maskMenu {
+	background: transparent;
+}
+
+.menuFixo #logo .logoLink {
+	width: 80px;
+}
+
+.menuFixo .menuLi {
+	border-color: #565656;
+}
+
+.menuFixo .menuLink,
+.menuFixo .menuIcone {
+	color: #565656;
+	font-size: 14px;
+}
+
+
+/* ============
+   MENU MOBILE
+   ============ */
+.maskMenu {
+	background: #000;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 11px;
+	z-index: 100;
+	opacity: 0.9;
+	-moz-opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+#header.menuAberto .maskMenu {
+	display: block;
+}
+
+#btMenu {
+	color: #FFF;
+	display: none;
+	font-size: 42px;
+	float: right;
+}
+
+.menuAberto #navMenu {
+	display: block;
+	float: none;
+	text-align: center;
+	clear: both;
+}
+
+.menuAberto #navMenu .menuLi {
+	border-color: #3d3d3b;
+}
+
+.menuAberto #navMenu .menuLiMenu {
+	border: none;
+	border-bottom: 1px dotted #3d3d3b;
+	display: block;
+	height: auto;
+	padding: 0
+}
+
+.menuAberto #navMenu .menuLiMenuFirst {
+	padding-top: 30px;
+}
+
+.menuAberto #navMenu .menuLiMenuLast {
+	margin-bottom: 30px;
+}
+
+.menuAberto #navMenu .menuLink, 
+.menuAberto #navMenu .menuIcone {
+	border: none;
+}
+
+.menuAberto #navMenu .menuLink {
+	padding: 20px 0;
+}
+
+#bannerTopo {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+}
+
+#fotos {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#fotos li, 
+#fotos img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* ============
+   RODAPE
+   ============ */
+.socialLi {
+	border-left: 1px dotted #FFF;
+	display: inline-block;
+	padding: 0 18px;
+	height: 34px;
+}
+
+.socialLi:last-child {
+	border-right: 1px dotted #FFF;
+}
+
+.socialIcone {
+	border-bottom: 2px solid transparent;
+	color: #363636;
+	display: block;
+	font-size: 16px;
+	padding: 8px 5px 6px;
+	position: relative;
+	top: 3px;
+}
+
+.socialIcone:hover {
+	border-color: #363636;
+	color: #FFF; 
+}
+
+#direitos {
+	display: block;
+	margin-top: 45px;
+}
+
+
+#pager,
+#pagerFotos {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 21px;
+	z-index: 1000;
+}
+
+#bannerTopo #pager {
+	bottom: 65px;
+}
+
+#pager span,
+#pager span:before,
+#pagerFotos span,
+#pagerFotos span:before {
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+#pager span,
+#pagerFotos span {
+	background: #FFF;
+	border: 1px solid #363636;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 1px;
+	height: 18px;
+	width: 18px;
+	position: relative;
+	text-indent: -9999px;
+	opacity: 0.2;
+	-moz-opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+#pager span:before,
+#pagerFotos span:before {
+	border: 1px solid transparent;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+#pager span:hover,
+#pager .cycle-pager-active,
+#pagerFotos span:hover,
+#pagerFotos .cycle-pager-active {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+#pager span:hover,
+#pagerFotos span:hover {
+	border-color: #b39e90;
+}
+
+#pager .cycle-pager-active,
+#pager .cycle-pager-active:hover,
+#pagerFotos .cycle-pager-active,
+#pagerFotos .cycle-pager-active:hover {
+	border-color: #FFF;
+}
+
+#pager .cycle-pager-active,
+#pagerFotos .cycle-pager-active {
+	background: #cdd400;
+}
+
+#pager .cycle-pager-active:before,
+#pagerFotos .cycle-pager-active:before {
+	border-color: #FFF;
+}
+
+
+/* ============
+   TRABALHOS
+   ============ */
+.trabalhosUl {
+	display: block;
+	margin: 0 auto;
+	max-width: 1160px;
+}
+
+.trabalhosUl .mix {
+	opacity: 0;
+	display: none;
+}
+
+.trabalhosLi {
+	border: 1px solid transparent;
+	width: 258px;
+	height: 281px;
+	float: left;
+	padding: 4px;
+	margin: 0 11px 13px;
+	position: relative;
+	text-align: center;
+}
+
+.trabalhosLi:hover {
+	border-color: #ebebeb;
+}
+
+.trabalhosLink {
+	display: block;
+	height: 100%;
+	position: relative;
+}
+
+.trabalhosImagem {
+	display: block;
+	width: 100%;
+	height: 199px;
+	position: relative;
+}
+
+.trabalhosImagem .trabalhosImg {
+	display: block;
+	width: 100%;
+}
+
+.trabalhosTitulo,
+.trabalhosUnidade {
+	color: #363636;
+	display: block;
+	line-height: 1em;
+	font-size: 14px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 37px;
+	padding: 0 25px;
+	text-transform: uppercase;
+}
+
+.trabalhosTitulo {
+	font-family: 'LexiaRegular', sans-serif;
+}
+
+.trabalhosUnidade {
+	color: #979797;
+	font-size: 12px;
+	bottom: 16px;
+}
+
+
+
+/* ============
+   MEDIA QUERIES
+   ============ */
+@media only screen and (max-width: 1279px) {
+	/* ============
+	   TRABALHOS
+	   ============ */
+	.trabalhosUl {
+		max-width: 870px;
+	}
+
+	.unidadesLink {
+		width: 160px;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	#header {
+		background: none;
+		height: 470px !important;
+		background-position: 0 0;
+	}
+
+	#bannerTopo {
+		display: block;
+	}
+
+	#navMenu {
+		display: none;
+	}
+
+	#btMenu {
+		display: block;
+	}
+
+	#tituloOusadia, 
+	#tituloOusadiaMobile {
+		bottom: 130px;
+	}
+
+	#blocoLogoMenu.menuFixoShow {
+		position: relative;
+	}
+
+
+	/* ============
+	   TRABALHOS
+	   ============ */
+	.trabalhosUl {
+		max-width: 580px;
+	}
+
+	.unidadesLink {
+		width: 115px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	/* ============
+	   GERAIS
+	   ============ */
+	.sessaoTitulo {
+		display: block;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+
+	/* ============
+	   TOPO
+	   ============ */
+	#tituloOusadia {
+		display: none;
+	}
+
+	#tituloOusadiaMobile {
+		display: block;
+	}
+
+
+	/* ============
+	   TRABALHOS
+	   ============ */
+	.trabalhosUl {
+		max-width: 260px;
+	}
+
+	.trabalhosLi {
+		margin-left: 0;
+		width: 250px;
+	}
+
+	.trabalhosImagem {
+		height: 193px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	/* ============
+	   GERAL
+	   ============ */
+	.containerGeral {
+		margin: 0 30px;
+	}
+}
+
+
+
+/* ============
+   RETINA
+   ============ */
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+	#spr {
+		background-image: url('../img/logos/spr_2x.png');
+		background-size: 29px 9px;
+	}
+}
+
+
+
+
+
+
+

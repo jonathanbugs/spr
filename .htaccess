@@ -1,0 +1,75 @@
+# URL rewriting module activation
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} !localhost [NC]
+RewriteCond %{HTTP_HOST} !192.168.*.* [NC]
+## COM WWW
+#RewriteCond %{HTTP_HOST} !^www\.spr\.com.br [NC]
+#RewriteRule ^(.*)$ http://www.spr.com.br/$1 [R=301,L]
+## SEM WWW
+#RewriteCond %{HTTP_HOST} ^www.spr\.com.br$ [NC]
+#RewriteRule ^(.*)$ http://spr.com.br/$1 [R=301,L]
+RewriteRule .* - [E=path:\/]
+
+RewriteCond %{HTTP_HOST} localhost [NC]
+RewriteRule .* - [E=path:\/spr\/]
+
+RewriteCond %{HTTP_HOST} 192.168.*.* [NC]
+RewriteRule .* - [E=path:\/spr\/]
+
+# UTILIDADES
+	# Block para IE 6
+	#RewriteCond %{HTTP_USER_AGENT} "MSIE 7.0" [OR]
+	RewriteCond %{HTTP_USER_AGENT} "MSIE 6.0"
+	RewriteRule ^$ /erro-navegador.php [L]
+
+	# ERROS
+	ErrorDocument 403 /erro-403.php
+	ErrorDocument 404 /erro-404.php
+
+	# GZIP Compression
+	<FilesMatch "\\.(js|css|html|htm|php|xml|tpl|woff|eot|ttf)$">
+	SetOutputFilter DEFLATE
+	</FilesMatch>
+
+	# ETag
+	<FilesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|woff|eot|ttf|cur)$">
+	FileETag None
+	</FilesMatch>
+
+	# Future Expires Headers
+#	<FilesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|woff|eot|ttf|cur)$>
+#	ExpiresActive On
+#	ExpiresDefault "access plus 1 month"
+#	</FilesMatch>
+
+	# FONTES
+	AddType application/vnd.ms-fontobject .eot
+	AddType application/octet-stream .otf .ttf
+	AddType application/font-woff .woff
+
+# ADMIN
+RewriteRule ^admin/(logout)/$ %{ENV:path}admin/login/sair.php [R,L]
+RewriteRule ^admin/(login)/$ %{ENV:path}admin/login/index.php [L]
+RewriteRule ^admin/(.*)/(.*)/(.*)/$ %{ENV:path}admin/index.php?modulo=$1&acao=$2&id=$3 [L]
+RewriteRule ^admin/(.*)/(.*)/$ %{ENV:path}admin/index.php?modulo=$1&acao=$2 [L]
+RewriteRule ^admin/(.*)/$ %{ENV:path}admin/index.php?modulo=$1 [L]
+RewriteRule ^(admin|manager)/$ %{ENV:path}admin/index.php [L]
+
+# PAGINAS
+RewriteRule ^(nossos\-produtos)/(.*)/(.*)/$ %{ENV:path}index.php?pagina=$1&categoria=$2&id=$3 [L]
+RewriteRule ^(nossos\-produtos)/(.*)/$ %{ENV:path}index.php?pagina=$1&categoria=$2 [L]
+RewriteRule ^(produto)/(.*)/(.*)/$ %{ENV:path}index.php?pagina=$1&categoria=$2&id=$3 [L]
+RewriteRule ^(produto)/(.*)/$ %{ENV:path}index.php?pagina=$1&categoria=$2 [L]
+
+# GERAL
+RewriteRule ^(.*)/(.*)/$ %{ENV:path}index.php?pagina=$1&id=$2 [L]
+RewriteRule ^(.*)/$ %{ENV:path}index.php?pagina=$1 [L]
+
+# ADICIONAR BARRA FINAL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(jpg|png|gif|css|js|php|swf|woff|eot|ttf|svg)$
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ %{ENV:path}$1/ [R=301,L]

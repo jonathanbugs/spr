@@ -1,0 +1,1037 @@
+/* ============
+   SESSAO OUSADIA
+   ============ */
+#ousadia {
+	background: url('../img/backgrounds/bg_ousadia.png') no-repeat;
+	background-position: 50% 0;
+	min-height: 378px;
+	z-index: 101;
+	margin-top: -11px;
+}
+
+#ousadia .texto {
+	max-width: 695px;
+	margin: 0 auto;
+	padding-top: 115px;
+}
+
+#ousadia .texto p {
+	line-height: 22px;
+	font-size: 13px;
+}
+
+#ousadia .ousadia {
+	display: block;
+	font-family: 'LexiaBoldItalic', sans-serif;
+	font-size: 36px;
+	line-height: 1em;
+	padding-top: 15px;
+}
+
+
+/* ============
+   SESSAO SOBRE
+   ============ */
+#sobre {
+	background-image: url('../img/backgrounds/bg_empresas.png');
+	background-position: 50% 0;
+	min-height: 635px;
+	margin-top: -35px;
+	padding: 165px 0;
+}
+
+#sobre .texto {
+	max-width: 295px;
+	margin: 0 auto;
+	padding-left: 225px;
+	text-align: left;
+	position: relative;
+}
+
+#sobre .numero4 {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	max-width: 215px;
+}
+
+#sobre .numero4 img {
+	display: block;
+	width: 100%;
+}
+
+.textoSobre span {
+	color: #363636;
+	display: block;
+	font-family: 'LexiaRegular', sans-serif;
+	font-size: 45px;
+	letter-spacing: -0.03em;
+	line-height: 0.91em;
+	text-transform: uppercase;
+	padding-left: 15px;
+}
+
+.textoSobre .txtEmpresa {
+	font-size: 64px;
+	letter-spacing: -0.04em;
+	padding-left: 0;
+}
+
+.textoSobre .txtUm {
+	font-family: 'LexiaXbold', sans-serif;
+	font-size: 180px;
+	letter-spacing: -0.04em;
+	padding-left: 0;
+}
+
+.textoSobre .txtIntegrado {
+	font-size: 52px;
+}
+
+.textoSobre .descricao {
+	color: #979797;
+	font-size: 14px;
+	line-height: 26px;
+	padding: 60px 10px 0 15px;
+}
+
+
+
+/* ============
+   4 UNIDADES
+   ============ */
+#unidades {
+	background: #cdd400;
+	padding: 170px 0;
+}
+
+.conteudoUnidades {
+	display: block;
+	padding: 0 30px 0 20px;
+}
+
+.numero,
+.listaUnidades {
+	float: left;
+	text-align: left;
+	width: 32%;
+}
+
+.numero img {
+	display: block;
+	width: 100%;
+	max-width: 347px;
+}
+
+.listaUnidades {
+	width: 57%;
+	float: right;
+}
+
+.listaUnidadesUl {
+	display: block;
+	font-size: 0;
+}
+
+.listaUnidadesLi {
+	float: left;
+	max-width: 40%;
+	min-height: 255px;
+}
+
+.listaUnidadesLiMargem {
+	margin-left: 80px;
+}
+
+.listaUnidadesLi .titulo {
+	display: block;
+	color: #363636;
+	font-family: 'LexiaBold', sans-serif;
+	font-size: 26px;
+	line-height: 1em;
+	padding-bottom: 13px;
+	text-transform: uppercase;
+}
+
+.listaUnidadesLi .descricao {
+	display: block;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+
+
+/* =========
+   PODE ENTRAR
+   ========= */
+#podeEntrar {
+	padding: 150px 0 130px;
+}
+
+#podeEntrar .blocoTitulo {
+	max-width: 680px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#podeEntrar .sessaoTitulo {
+	border: 0;
+	padding: 0;
+}
+
+#podeEntrar .sessaoTitulo span {
+	color: #363636;
+	display: block;
+	font-family: 'LexiaThin', sans-serif;
+	font-size: 100px;
+	text-align: left;
+	letter-spacing: -0.04em;
+	line-height: 1em;
+}
+
+#podeEntrar .sessaoTitulo .txtSpr {
+	font-family: 'LexiaXbold', sans-serif;
+}
+
+#podeEntrar .descricao {
+	color: #979797;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: left;
+	max-width: 270px;
+	margin: 45px 0;
+}
+
+#podeEntrar .descricao span {
+	display: block;
+}
+
+#banner {
+	position: relative;
+}
+
+#fotosUl {
+	width: 100%;
+	position: relative;
+}
+
+#fotosUl li,
+#fotosUl img {
+	display: block;
+	width: 100%;
+}
+
+#videosUl {
+	font-size: 0;
+	line-height: 0;
+	max-width: 1071px;
+	margin: 120px auto 0;
+}
+
+.videosLi {
+	display: inline-block;
+	width: 317px;
+	height: 270px;
+	margin-left: 60px;
+	position: relative;
+}
+
+.videosLiFirst {
+	margin-left: 0;
+}
+
+.videosImagem,
+.videosImagem img {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.play, 
+.playHover {
+	position: absolute;
+	width: 52px;
+	height: 71px;
+	top: 50%;
+	left: 50%;
+	margin: -35px 0 0 -26px;
+	z-index: 5;
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+	-moz-transition: all .6s;
+	-webkit-transition: all .6s;
+	-o-transition: all .6s;
+	transition: all .6s;
+}
+
+.playHover {
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.play img {
+	display: block;
+	width: 100%;
+}
+
+.videosLink:hover .play {
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.videosLink:hover .playHover {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.videosTitulo {
+	color: #363636;
+	display: block;
+	font-family: 'LexiaRegular', sans-serif;
+	font-size: 14px;
+	line-height: 1em;
+	padding: 20px 10px 0;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.boxVideos {
+	background: #FFF;
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9995;
+	padding: 2%;
+}
+
+.embedVideo {
+	background: #000;
+	width: 100%;
+	height: 100%;
+}
+
+#fecharVideos {
+	background: #CDD400;
+	color: #363636;
+	font-size: 45px;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+#fecharVideos span {
+	line-height: 70px;
+}
+
+#fecharVideos:hover {
+	background: #363636;
+	color: #CDD400; 
+}
+
+
+
+/* =========
+   CLIENTES
+   ========= */
+#clientesUl {
+	margin: 85px auto 0;
+	font-size: 0;
+	line-height: 0;
+	max-width: 910px;
+}
+
+.clientesLi {
+	width: 224px;
+	height: 113px;
+	display: inline-block;
+	border-top: 1px dotted #CCC;
+	border-left: 1px dotted #CCC;
+}
+
+.clientesLinha1 {
+	border-top: none;
+}
+
+.clientesColuna1 {
+	border-left: none;
+}
+
+.clientesLi img {
+	display: block;
+	width: 100%;
+	max-width: 224px;
+	margin: 0 auto;
+}
+
+.clientesLinhas {
+	margin: 150px 0 85px;
+}
+
+.clientesLinhas img {
+	display: block;
+	width: 100%;
+}
+
+
+/* =========
+   TRABALHOS
+   ========= */
+#trabalhos {
+	margin-bottom: 90px;
+}
+
+.navTrabalhos {
+	display: block;
+	margin: 60px 0;
+}
+
+.unidadesUl {
+	font-size: 0;
+}
+
+.unidadesLi {
+	display: inline-block;
+	margin-left: 12px;
+}
+
+.unidadesLi:first-child {
+	margin-left: 0;
+}
+
+.unidadesLink {
+	border: 1px dotted #CCC;
+	color: #b9b9b9;
+	display: block;
+	font-size: 12px;
+	line-height: 1em;
+	text-transform: uppercase;
+	width: 176px;
+	height: 38px;
+	line-height: 38px;
+	position: relative;
+}
+
+.unidadesLink:before {
+	border: 1px solid transparent;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.unidadesLink:hover {
+	border: 1px solid;
+}
+
+.unidadesLink:hover,
+.unidadesLink:hover:before {
+	border-color: #cdd400;
+}
+
+.unidadesLink.active {
+	border: 1px solid #cdd400;
+	color: #FFF;
+	background: #cdd400;
+}
+
+#filtroTrabalho {
+	position: relative;
+}
+
+#btSelect {
+	background: #cdd400;
+	color: #FFF;
+	display: none;
+	font-size: 14px;
+	text-transform: uppercase;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+}
+
+#btSelect .icone {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	width: 22px;
+	height: 16px;
+	line-height: 16px;
+	margin-top: -8px;
+	font-size: 26px;
+	text-align: center;
+}
+
+.btSelectAberto .icone {
+	-moz-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+#formFiltroBusca .relative,
+#formFiltroBusca .btForm {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+#formFiltroBusca .relative {
+	width: auto;
+	border: 1px solid #e3e3e3;
+	position: relative;
+	padding-right: 75px;
+}
+
+#formFiltroBusca .label,
+#formFiltroBusca .input {
+	color: #c9c9c9;
+	font-size: 14px;
+}
+
+#formFiltroBusca .label {
+	top: 23px;
+}
+
+#formFiltroBusca .input {
+	height: 20px;
+	padding: 19px 0;
+}
+
+#formFiltroBusca .btForm {
+	width: 52px;
+	height: 52px;
+}
+
+#formFiltroBusca .btForm .icone {
+	font-size: 20px;
+}
+
+
+
+/* =========
+   CONTATO
+   ========= */
+#contatoUl {
+	color: #363636;
+	font-family: 'OpenSans', sans-serif;
+	line-height: 1em;
+	margin: 50px 0 60px;
+}
+
+.contatoLi:first-child {
+	margin-bottom: 15px;
+}
+
+.contatoLi .contato {
+	display: inline-block;
+	font-size: 20px;
+}
+
+.contatoFone {
+	margin-right: 25px;
+}
+
+.contatoLi .contato .icone {
+	color: #cdd400;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+
+.contatoLi .contatoFone .icone {
+	top: 3px;
+}
+
+.contatoLi .contato a {
+	color: #363636;
+	font-family: 'LexiaBold', sans-serif;
+}
+
+.contatoLi .contato a:hover {
+	color: #cdd400
+}
+
+#conteudoFormularioMapa {
+	display: block;
+	min-height: 500px;
+	margin: 0 55px 0 105px;
+}
+
+#formulario {
+	width: 41%;
+	float: left;
+}
+
+#mapa {
+	background: #F4F4F4;
+	width: 52.5%;
+	height: 350px;
+	float: right;
+	position: relative;
+}
+
+#mapa:before {
+	border: 4px solid #cdd400;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#formContato .relative {
+	position: relative;
+	margin-bottom: 6px;
+}
+
+#formContato .label,
+#formContato .input,
+#formContato .textarea {
+	color: #979797;
+	font-family: 'OpenSans', sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+#formContato .label {
+	position: absolute;
+	top: 14px;
+	left: 22px;
+}
+
+#formContato .input,
+#formContato .textarea {
+	background: none;
+	border: 1px solid #d7d7d7;
+	display: block;
+	padding: 0 20px;
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	outline: none;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+}
+
+#formContato .relativeTextarea {
+	width: 100%;
+}
+
+#formContato .textarea {
+	height: 148px;
+	padding: 10px 20px;
+	line-height: 20px;
+	resize: none;
+}
+
+#formContato #btEnviar {
+	border: 2px solid #cdd400;
+	color: #cdd400;
+	width: 100%;
+	height: 52px;
+	font-size: 20px;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#formContato #btEnviar:hover {
+	background: #cdd400;
+	color: #FFF;
+}
+
+#formContato .input.error,
+#formContato .textarea.error {
+	border-color: #ff0000;
+}
+
+#contatoResposta {
+	position: relative;
+	margin-top: 6px;
+	height: 50px;
+}
+
+#contatoResposta .message {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 2px solid #cdd400;
+	color: #cdd400;
+	line-height: 50px;
+}
+
+#contatoResposta #erroContato {
+	border-color: #ff0000;
+	color: #ff0000;
+}
+
+
+
+/* ============
+   MEDIA QUERIES
+   ============ */
+@media only screen and (max-width: 1279px) {
+	/* ============
+	   VIDEOS
+	   ============ */
+	#videosUl {
+		max-width: 960px;
+	}
+
+	.videosLi {
+		margin-left: 30px;
+		width: 280px;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	/* ============
+	   4 UNIDADES
+	   ============ */
+	.numero, 
+	.listaUnidades {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+
+	.numero img {
+		display: inline-block;
+	}
+
+	.numero {
+		margin-bottom: 60px;
+	}
+
+	.listaUnidadesUl {
+		text-align: left;
+	}
+
+
+	/* ============
+	   VIDEOS
+	   ============ */
+	#videosUl {
+		max-width: 660px;
+	}
+
+	.videosLi {
+		margin: 0 20px;
+	}
+
+
+	/* ============
+	   CLIENTES
+	   ============ */
+	.clientesLi {
+		max-width: 165px;
+		height: auto;
+	}
+
+
+	/* ============
+	   TRABALHOS
+	   ============ */
+	.trabalhosUl {
+		max-width: 580px;
+	}
+
+	.unidadesLink {
+		width: 115px;
+	}
+
+
+
+	/* ============
+	   CONTATO
+	   ============ */
+	#conteudoFormularioMapa {
+		margin: 0 55px;
+	}
+
+	#formulario,
+	#mapa {
+		width: 100%;
+		float: none;
+	}
+
+	#mapa {
+		margin: 30px 0;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	/* ============
+	   OUSADIA
+	   ============ */
+	#ousadia .texto {
+		max-width: 250px;
+		padding-top: 50px;
+	}
+
+	#ousadia .ousadia {
+		padding-top: 25px;
+	}
+
+
+	/* ============
+	   SOBRE
+	   ============ */
+	#sobre .texto {
+		max-width: 250px;
+		padding: 0;
+		padding-top: 360px;
+	}
+
+	#sobre .numero4 {
+		max-width: 249px;
+	}
+
+	.textoSobre .txt {
+		font-size: 38px;
+	}
+
+	.textoSobre .txtUm {
+		font-size: 152px;
+	}
+
+	.textoSobre .txtEmpresa {
+		font-size: 54px;
+	}
+
+	.textoSobre .txtIntegrado {
+		font-size: 44px;
+	}
+
+	.textoSobre .descricao {
+		padding-top: 40px;
+	}
+
+
+	/* ============
+	   4 UNIDADES
+	   ============ */
+	#unidades {
+		padding: 80px 0;
+	}
+
+	.conteudoUnidades {
+		padding: 0;
+	}
+
+	.listaUnidadesUl {
+		max-width: 260px;
+		margin: 0 auto;
+	}
+
+	.listaUnidadesLiMargem {
+		margin: 0;
+	}
+
+	.listaUnidadesLi {
+		float: none;
+		width: 100%;
+		max-width: 100%;
+		min-height: 100%;
+		margin-top: 60px;
+	}
+
+	.listaUnidadesLi:first-child {
+		margin-top: 0;
+	}
+
+
+
+	/* ============
+	   PODE ENTRAR
+	   ============ */
+	#podeEntrar {
+		padding: 80px 0 90px;
+	}
+
+	#podeEntrar .sessaoTitulo span {
+		font-size: 66px;
+	}
+
+
+
+	/* ============
+	   VIDEOS
+	   ============ */
+	#videosUl {
+		max-width: 260px;
+	}
+
+	.videosLi {
+		margin: 0;
+		width: 100%;
+		height: auto;
+		min-height: 225px;
+	}
+
+	.play, 
+	.playHover {
+		width: 42px;
+		height: 60px;
+		margin: -30px 0 0 -21px;
+	}
+
+
+	/* ============
+	   CLIENTES
+	   ============ */
+	#clientesUl {
+		max-width: 260px;
+		margin-top: 0;
+	}
+
+	.clientesLi {
+		width: 100%;
+		height: auto;
+		border: 0;
+		border-top: 1px dotted #CCC;
+	}
+
+	.clientesLi:first-child {
+		border-top: none;
+	}
+
+	.clientesLinhas {
+		margin: 50px 0 100px;
+	}
+
+
+	/* ============
+	   TRABALHOS
+	   ============ */
+	#trabalhos .containerGeral {
+		max-width: 260px;
+		margin: 0 auto;
+	}
+
+	#btSelect {
+		display: block;
+	}
+
+	.navTrabalhos {
+		background: #FFF;
+		border: none;
+		border-top: 0;
+		display: none;
+		position: absolute;
+		top: 40px;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		margin-top: 0;
+	}
+
+	.unidadesLi {
+		display: block;
+		margin: 0;
+	}
+
+	.unidadesLink {
+		border-bottom-color: transparent;
+		color: #b9b9b9;
+		display: block;
+		padding: 12px 0;
+		width: 100%;
+		height: auto;
+		line-height: 1em;
+		-o-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		appearance:none;
+	}
+
+	.unidadesLink:hover,
+	.unidadesLink:hover:before {
+		border-color: transparent;
+	}
+
+	.unidadesLink:hover {
+		background: #cdd400;
+		color: #FFF;
+	}
+
+	#trabalhosUl {
+		margin-top: 18px;
+	}
+
+	.trabalhosLi {
+		margin-left: 0;
+		width: 250px;
+	}
+
+	.trabalhosImagem {
+		height: 193px;
+	}
+
+
+	
+	/* ============
+	   CONTATO
+	   ============ */
+	#conteudoFormularioMapa {
+		margin: 0;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	/* ============
+	   FOTOS
+	   ============ */
+	#fotosUl {
+		height: 320px;
+		overflow: hidden;
+	}
+
+	#fotosUl li {
+		position: relative;
+		height: 100%;
+	}
+
+	#fotosUl img {
+		width: auto;
+		height: 100%;
+		position: relative;
+		top: 0%;
+		left: -40%;
+	}
+}
